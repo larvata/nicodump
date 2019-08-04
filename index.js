@@ -8,6 +8,20 @@ function showVersion(pkg) {
 
 function showHelp(pkg) {
   showVersion(pkg);
+//   console.log(`
+//   Usage:
+//   $ nicodump [options] <live-id>
+
+//   Options:
+//     --help, -h  this message
+//     --version, -v  show version
+//     --dry-run, -r  extract the live metadata only
+//     --cookie, -c  import cookie for authentication
+//     --video, -vo  dump the video only
+//     --comment, -co  dump the comments only
+//     --ffmpeg-path, -fp  set the ffmpeg path
+// `);
+
   console.log(`
   Usage:
   $ nicodump [options] <live-id>
@@ -15,11 +29,7 @@ function showHelp(pkg) {
   Options:
     --help, -h  this message
     --version, -v  show version
-    --dry-run, -r  extract the live metadata only
-    --auth, -a  import cookie for authentication
-    --video, -vo  dump the video only
-    --comment, -co  dump the comments only
-    --ffmpeg-path, -fp  set the ffmpeg path
+    --cookie, -c  import cookie for authentication
 `);
 }
 
@@ -91,8 +101,6 @@ const options = {
   url: `https://live2.nicovideo.jp/watch/${liveId}`,
   cookies: flags.cookies,
 };
-
-console.log(options);
 
 const nico = new NicoClientEmulator(options);
 
