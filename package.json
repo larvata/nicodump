@@ -17,7 +17,7 @@
   "dependencies": {
     "canvas": "^2.4.1",
     "cookiefile": "^1.0.10",
-    "https-proxy-agent": "^2.2.2",
+    "https-proxy-agent": "^2.2.3",
     "meow": "^5.0.0",
     "request": "^2.88.0",
     "ws": "^6.1.4"
